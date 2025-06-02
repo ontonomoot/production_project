@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    //куда собирается сборка, нам не важно, т.к сборка с пощьюя webpack - папка build
+    "outDir": "./dist/",
+    // НЕ ПОЗВОЛЯЕТ использовать переменные без ЯВНОГО указания типа
+    "noImplicitAny": true,
+    // формат сборки
+    "module": "ESNext",
+    //  в какую специф-ию компилируем: для боль-ва брауз-ов
+    "target": "es5",
+    // позволяет писать jsx конструкции return ( <div onClick=....></div>)
+    "jsx": "react-jsx",
+    //allowJs - обработка не только ts но и js
+    "allowJs": true,
+    //moduleResolution - опред-ет, какие импорты будут: node(99%) или сlassic 
+    "moduleResolution": "node",
+    //allowSyntheticDefaultImports - исрользование импортов без синтаксиса import * as ....
+    "allowSyntheticDefaultImports": true,
+    // esModuleInterop позволяет использовать вместо common.js(require, module.exports) import, export
+    "esModuleInterop": true,
+    // для абсолютного импорта
+    // "baseUrl": ".",
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
+}
