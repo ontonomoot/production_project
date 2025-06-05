@@ -18,8 +18,13 @@
     "allowSyntheticDefaultImports": true,
     // esModuleInterop позволяет использовать вместо common.js(require, module.exports) import, export
     "esModuleInterop": true,
-    // для абсолютного импорта
-    // "baseUrl": ".",
+    // для абсолютного импорта из папки src
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "./src/*"
+      ]
+    }
   },
   "ts-node": {
     "compilerOptions": {
