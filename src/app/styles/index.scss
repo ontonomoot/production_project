@@ -10,8 +10,20 @@
     size: var(--font-size-m);
     line-height: var(--font-line-m);
   }
+
   background: var(--bg-color);
   color: var(--primary-color);
 
   min-height: 100vh;
+
+}
+
+.content-page {
+  display: flex;
+}
+
+// чтобы основная страница растянулась до сайдбара но не заходила на него => AppRouter
+.page-wrapper {
+  flex-grow: 1;
+  padding: 20px;
 }

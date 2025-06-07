@@ -9,5 +9,6 @@ export function buildDevServer(options: BuildOptions): DevServerConfiguration {
     // позволяет проксировать запросы через корневую страницу - обновление некорневой стриницы
     // не выбрасывает на cannot get/
     historyApiFallback: true,
+    hot: true
   }
 }
