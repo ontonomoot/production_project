@@ -1,0 +1,11 @@
+{
+  "extends": "stylelint-config-standard-scss",
+  "rules": {
+    "scss/operator-no-unspaced": null,
+    "selector-class-pattern": null,
+    "indentation": [
+      2
+    ],
+    "no-missing-end-of-source-newline": null
+  }
+}
