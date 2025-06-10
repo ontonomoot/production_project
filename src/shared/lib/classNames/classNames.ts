@@ -5,7 +5,7 @@ export function classNames(cls: string, mods: Mods = {}, additional: string[] = 
     cls,
     ...additional.filter(Boolean), //чтобы не было ошибки из-за undefined null в пропсах - фильтрует только true опции
     ...Object.entries(mods)
-      .filter(([className, value]) => Boolean(value))
+      .filter(([_, value]) => Boolean(value))
       .map(([className]) => className) // фильтруем и оставляем значения стилей со значением true 
   ]
     .join(' ') // и собираем в название класса
