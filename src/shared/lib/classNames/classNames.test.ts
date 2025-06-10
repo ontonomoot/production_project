@@ -1,7 +1,5 @@
 import { classNames } from "./classNames";
 
-
-
 describe('classNames', () => {
   test('test function', () => {
     expect(classNames('someClass')).toBe('someClass');
