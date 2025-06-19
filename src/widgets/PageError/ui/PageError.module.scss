@@ -1,0 +1,23 @@
+.PageError {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family:
+    "Trebuchet MS",
+    "Lucida Sans Unicode",
+    "Lucida Grande",
+    "Lucida Sans",
+    Arial,
+    sans-serif;
+}
+
+.ButtonError {
+  padding: 10px;
+  margin: 20px;
+  background: rgb(224 176 92);
+  border: 0.3px solid rgb(174 174 174);
+  border-radius: 7px;
+}
