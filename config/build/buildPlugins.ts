@@ -2,7 +2,9 @@ import webpack from "webpack";
 import path from "path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import {BundleAnalyzerPlugin} from 'webpack-bundle-analyzer'
 import { BuildOptions } from "./types/config";
+
 
 // функция которая возвращает плагины - для декомпозиции - вызываем ее в основном конфиге
 // WebpackPluginInstance - специальный тип в вебпаке для плагингов
@@ -24,6 +26,6 @@ export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPlu
       __IS_DEV__: JSON.stringify(isDev)
     }),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
+    new BundleAnalyzerPlugin()
   ]
 }
