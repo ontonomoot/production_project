@@ -3,13 +3,15 @@ import cls from './Button.module.scss'
 import { ButtonHTMLAttributes, FC } from 'react'
 
 export enum ThemeButton {
-  CLEAR = 'clear'
+  CLEAR = 'clear',
+  OUTLINE = 'outline'
 }
 
 // унаследование от типа ButtonHTMLAttributes для использования встроенных пропсов
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string,
   theme?: ThemeButton,
+  backgroundColor?: string
 }
 
 export const Button: FC<ButtonProps> = (props) => {

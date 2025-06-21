@@ -5,7 +5,8 @@ import { FC } from 'react'
 
 export enum AppLinkTheme {
   PRIMARY = 'primary',
-  SECONDARY = 'secondary'
+  SECONDARY = 'secondary',
+  OTHER = 'other'
 }
 
 // тип LinkProps - встроенный тип компонента Link, его можно вытащить наружу)
