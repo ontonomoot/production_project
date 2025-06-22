@@ -1,5 +1,4 @@
 import webpack from "webpack";
-import path from "path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
@@ -34,5 +33,4 @@ export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPlu
   ))
   }
   return plugins
-  
 }
