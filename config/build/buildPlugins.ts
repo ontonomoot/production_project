@@ -1,5 +1,4 @@
 import webpack from "webpack";
-import path from "path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
@@ -24,14 +23,14 @@ export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPlu
     // присваиваем значение isDev - теперь она доступна в корне
     new webpack.DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev)
-    }),
+    })
   ]
   if (isDev) {
-    plugins.push(new webpack.HotModuleReplacementPlugin());
+    plugins.push(new webpack.HotModuleReplacementPlugin())
     plugins.push(new BundleAnalyzerPlugin({
       openAnalyzer: false,
-    })
-    )
+    }
+  ))
   }
   return plugins
 }
