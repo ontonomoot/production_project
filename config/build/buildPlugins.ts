@@ -9,7 +9,7 @@ import { BuildOptions } from "./types/config";
 // WebpackPluginInstance - специальный тип в вебпаке для плагингов
 export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPluginInstance[] {
   const plugins = [
-        new HtmlWebpackPlugin({
+    new HtmlWebpackPlugin({
       template: paths.html,
     }),
     new webpack.ProgressPlugin(),
