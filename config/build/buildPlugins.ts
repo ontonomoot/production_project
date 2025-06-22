@@ -9,8 +9,8 @@ import { BuildOptions } from "./types/config";
 // функция которая возвращает плагины - для декомпозиции - вызываем ее в основном конфиге
 // WebpackPluginInstance - специальный тип в вебпаке для плагингов
 export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPluginInstance[] {
-  return [
-    new HtmlWebpackPlugin({
+  const plugins = [
+        new HtmlWebpackPlugin({
       template: paths.html,
     }),
     new webpack.ProgressPlugin(),
@@ -24,10 +24,15 @@ export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPlu
     // присваиваем значение isDev - теперь она доступна в корне
     new webpack.DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev)
-    }),
-    new webpack.HotModuleReplacementPlugin(),
-    new BundleAnalyzerPlugin({
-      openAnalyzer: false,
     })
   ]
+  if (isDev) {
+    plugins.push(new webpack.HotModuleReplacementPlugin())
+    plugins.push(new BundleAnalyzerPlugin({
+      openAnalyzer: false,
+    }
+  ))
+  }
+  return plugins
+  
 }
