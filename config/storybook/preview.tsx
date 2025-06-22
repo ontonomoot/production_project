@@ -1,5 +1,6 @@
 import type { Preview } from '@storybook/react-webpack5'
 import 'app/styles/index.scss'
+import 'loki/configure-react'
 import { Theme } from '../../src/app/providers/ThemeProvider/lib/ThemeContext';
 import { BrowserRouter } from 'react-router-dom';
 
