@@ -9,6 +9,7 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     strategy: 
+
       matrix:
         node-version: [17.x]
     steps:
@@ -25,3 +26,4 @@ jobs:
         run: npm run lint:scss
       - name: unit testing
         run: npm run test:unit
+
