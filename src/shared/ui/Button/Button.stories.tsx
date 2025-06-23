@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 
 import { fn } from 'storybook/test';
-import { Button, ThemeButton } from './Button';
+import { Button, ButtonSize, ButtonTheme } from './Button';
 import { Theme } from 'app/providers/ThemeProvider';
 // import 'app/styles/index.scss'
 
@@ -37,21 +37,37 @@ export const Primary: Story = {
 export const Clear: Story = {
   args: {
     children: 'Text',
-    theme: ThemeButton.CLEAR
+    theme: ButtonTheme.CLEAR
   },
 };
 
-export const Outline: Story = {
+export const OutlineSizeM: Story = {
   args: {
     children: 'Text',
-    theme: ThemeButton.OUTLINE,
+    theme: ButtonTheme.OUTLINE,
+    size: ButtonSize.M
+  },
+};
+export const OutlineSizeL: Story = {
+  args: {
+    children: 'Text',
+    theme: ButtonTheme.OUTLINE,
+    size: ButtonSize.L
+  },
+};
+
+export const OutlineSizeXL: Story = {
+  args: {
+    children: 'Text',
+    theme: ButtonTheme.OUTLINE,
+    size: ButtonSize.XL
   },
 };
 
 export const OutlineDark: Story = {
   args: {
     children: 'Text',
-    theme: ThemeButton.OUTLINE,
+    theme: ButtonTheme.OUTLINE,
   },
   decorators: [
     (Story) => (
@@ -60,5 +76,41 @@ export const OutlineDark: Story = {
       </div>
     ),
   ],
+};
 
+export const Background: Story = {
+  args: {
+    children: 'Text',
+    theme: ButtonTheme.BACKGROUND,
+  },
+};
+export const BackgroundInverted: Story = {
+  args: {
+    children: 'Text',
+    theme: ButtonTheme.BACKGROUND_INVERTED,
+  },
+};
+export const SquareSizeM: Story = {
+  args: {
+    children: '>',
+    theme: ButtonTheme.BACKGROUND_INVERTED,
+    square: true,
+    size: ButtonSize.M
+  },
+};
+export const SquareSizeL: Story = {
+  args: {
+    children: '>',
+    theme: ButtonTheme.BACKGROUND_INVERTED,
+    square: true,
+    size: ButtonSize.L
+  },
+};
+export const SquareSizeXL: Story = {
+  args: {
+    children: '>',
+    theme: ButtonTheme.BACKGROUND_INVERTED,
+    square: true,
+    size: ButtonSize.XL
+  },
 };
