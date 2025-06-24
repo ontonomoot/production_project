@@ -3,6 +3,10 @@
 @import "themes/dark";
 @import "themes/light";
 
+body {
+  color: var(--primary-color);
+}
+
 .app {
   font: {
     family: var(--font-family-main);
@@ -11,7 +15,6 @@
   }
 
   background: var(--bg-color);
-  color: var(--primary-color);
   min-height: 100vh;
 }
 

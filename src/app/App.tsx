@@ -4,14 +4,13 @@ import { useTheme } from "app/providers/ThemeProvider"
 import { AppRouter } from "./providers/router"
 import { Navbar } from "widgets/Navbar"
 import { Sidebar } from 'widgets/Sidebar/ui'
-import { Suspense, useEffect } from 'react'
+import { Suspense, useEffect, useState } from 'react'
+import { Modal } from 'shared/ui/Modal/Modal'
+import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 
 function App() {
   const { theme } = useTheme();
 
-  // useEffect(() => {
-  //   throw new Error();
-  // },[])
   return (
     <div className={classNames('app', {}, [theme])}>
       <Suspense fallback=''>

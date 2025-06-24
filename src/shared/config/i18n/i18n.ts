@@ -11,7 +11,8 @@ i18n
   .init({
     fallbackLng: 'ru',
     // debug - спам в консоли - нужно отключать при продакшене
-    debug: __IS_DEV__ ? true : false, //обязательно объявить в глобальных типах для ts
+    debug: false,
+    // debug: __IS_DEV__ ? true : false, //обязательно объявить в глобальных типах для ts
 
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
