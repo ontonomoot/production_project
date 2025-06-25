@@ -1,0 +1,14 @@
+{
+  "Create test": {
+    "scope": "typescript, typescriptreact",
+    "prefix": "tst",
+    "body": [
+      "describe('$TM_FILENAME_BASE', () => {",
+      " test('$1', () => {",
+      " expect().toEqual()",
+      " })",
+      "})"
+    ],
+    "description": "Create test"
+  }
+}
