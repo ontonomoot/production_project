@@ -57,7 +57,7 @@ export const Modal = (props: ModalProps) => {
   }
 
   return (
-    // <Portal element={document.body}>
+    <Portal element={document.body}>
       <div className={classNames(cls.Modal, mods, [className])}>
         <div className={cls.overlay} onClick={closeHandler}>
           <div className={cls.content} onClick={onContentClick}>
@@ -65,6 +65,6 @@ export const Modal = (props: ModalProps) => {
           </div>
         </div>
       </div>
-    // </Portal>
+    </Portal>
   )
 }

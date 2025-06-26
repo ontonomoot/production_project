@@ -13,9 +13,9 @@ interface NavbarProps {
 
 export const Navbar = ({ className }: NavbarProps) => {
   const [isAuthModal, setIsAuthModal] = useState(false)
-  const {t} = useTranslation();
+  const { t } = useTranslation();
   const onToggleAuth = useCallback(() => {
-    setIsAuthModal(prev => !prev) 
+    setIsAuthModal(prev => !prev)
   }, [isAuthModal])
   return (
     <div className={classNames(cls.Navbar, {}, [className])}>

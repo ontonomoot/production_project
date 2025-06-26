@@ -5,15 +5,15 @@
 
 body {
   color: var(--primary-color);
-}
 
-.app {
   font: {
     family: var(--font-family-main);
     size: var(--font-size-m);
     line-height: var(--font-line-m);
   }
+}
 
+.app {
   background: var(--bg-color);
   min-height: 100vh;
 }
