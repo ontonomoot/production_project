@@ -10,9 +10,9 @@ import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 
 function App() {
   const { theme } = useTheme();
-  useEffect(() => {
-    document.body.className = Theme.LIGHT
-  }, [])
+  // useEffect(() => {
+  //   document.body.className = Theme.LIGHT
+  // }, [])
   return (
     <div className={classNames('app', {}, [])}>
       <Suspense fallback=''>

@@ -1,19 +1,19 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 
 import { Theme } from 'app/providers/ThemeProvider';
-import AboutPage from './AboutPage';
+import { LoginForm } from './LoginForm';
 
 const meta = {
-  title: 'pages/AboutPage',
-  component: AboutPage,
-  // parameters: {
-  //   layout: 'centered',
-  // },
+  title: 'features/LoginForm',
+  component: LoginForm,
+  parameters: {
+    layout: 'centered',
+  },
   tags: ['autodocs'],
   argTypes: {
   },
   args: {},
-} satisfies Meta<typeof AboutPage>;
+} satisfies Meta<typeof LoginForm>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

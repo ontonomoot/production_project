@@ -1,5 +1,5 @@
 import type { Preview } from '@storybook/react-webpack5'
-import 'app/styles/index.scss'
+import '../../src/app/styles/index.scss'
 import { Theme } from '../../src/app/providers/ThemeProvider/lib/ThemeContext';
 import { BrowserRouter } from 'react-router-dom';
 
@@ -8,7 +8,7 @@ const preview: Preview = {
   decorators: [
     (Story) => (
       <BrowserRouter>
-        <div className={`app ${Theme.LIGHT}`}>
+        <div className={Theme.LIGHT}>
           <Story />
         </div>
       </BrowserRouter>
